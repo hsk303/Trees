@@ -93,7 +93,7 @@ public class BST {
         }
         return lca;
     }
-
+//print in range
     public static void printInRange(Node node, int lr, int rr) {
         if (node == null)
             return;
