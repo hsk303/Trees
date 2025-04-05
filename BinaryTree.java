@@ -356,6 +356,15 @@ public class BinaryTree{
         }
         return myAns;
     }
-    
+    public static int[] diameter3(Node node){
+        if(node==null)
+           return new int[]{0,-1};
+        int[] ld= diameter2(node.left);
+        int[] rd= diameter2(node.right);
+        int[] myAns= new int[2];
+        myAns[0]= Math.max(Math.max(ld[0],rd[0]),ld[1]+rd[1]+2);
+        myAns[1]= Math.max(ld[1],rd[1])+1;
+        return myAns;
+    }
     
 }
